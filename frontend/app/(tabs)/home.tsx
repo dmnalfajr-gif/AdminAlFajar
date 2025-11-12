@@ -78,7 +78,7 @@ export default function HomeScreen() {
             style={styles.quickAccessItem}
             onPress={() => router.push('/(tabs)/packages?type=umrah')}
           >
-            <MaterialCommunityIcons name="kaaba" size={32} color="#FFD700" />
+            <MaterialCommunityIcons name="mosque" size={32} color="#FFD700" />
             <Text style={styles.quickAccessText}>Paket Umrah</Text>
           </TouchableOpacity>
           <TouchableOpacity

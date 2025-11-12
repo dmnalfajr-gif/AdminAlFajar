@@ -51,7 +51,7 @@ export default function IndexScreen() {
         {/* Features */}
         <View style={styles.featuresContainer}>
           <View style={styles.featureItem}>
-            <MaterialCommunityIcons name="kaaba" size={32} color="#FFD700" />
+            <MaterialCommunityIcons name="mosque" size={32} color="#FFD700" />
             <Text style={styles.featureText}>Paket Umrah Terpercaya</Text>
           </View>
           <View style={styles.featureItem}>
