@@ -21,7 +21,7 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 const BACKEND_URL = process.env.EXPO_PUBLIC_BACKEND_URL;
-const AUTH_URL = 'https://auth.emergentagent.com';
+const AUTH_URL = process.env.EXPO_PUBLIC_AUTH_URL || 'https://auth.emergentagent.com';
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
