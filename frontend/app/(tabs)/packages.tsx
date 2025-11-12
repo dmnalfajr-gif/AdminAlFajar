@@ -271,7 +271,7 @@ const styles = StyleSheet.create({
     color: '#212121',
     marginRight: 8,
   },
-  typeB badge: {
+  typeBadge: {
     backgroundColor: '#FFD700',
     paddingHorizontal: 8,
     paddingVertical: 4,
