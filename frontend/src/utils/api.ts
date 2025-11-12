@@ -1,10 +1,14 @@
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Platform } from 'react-native';
 
-const BACKEND_URL = process.env.EXPO_PUBLIC_BACKEND_URL;
+// Use relative URL for web (proxied to backend), absolute for native
+const BACKEND_URL = Platform.OS === 'web' 
+  ? '' // Relative URL - proxy will handle /api routes
+  : process.env.EXPO_PUBLIC_BACKEND_URL;
 
 export const api = axios.create({
-  baseURL: `${BACKEND_URL}/api`,
+  baseURL: Platform.OS === 'web' ? '/api' : `${BACKEND_URL}/api`,
   timeout: 10000,
 });
 
